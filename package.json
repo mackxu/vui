@@ -2,22 +2,25 @@
   "name": "vui",
   "version": "1.0.0",
   "description": "A Vue Libary project",
+  "main": "lib/vui.js",
   "author": "xuyadong <xuyadong@qiyi.com>",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "test": "npm run unit",
     "lint": "eslint --ext .js,.vue src test/unit",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "dist": "cross-env NODE_ENV=production webpack --progress --hide-modules --config build/webpack.lib.conf.js"
   },
   "dependencies": {
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },
   "files": [
-    "dist",
+    "lib",
+    "src",
     "components"
   ],
   "devDependencies": {
