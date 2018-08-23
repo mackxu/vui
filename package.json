@@ -17,7 +17,8 @@
     "vue-router": "^3.0.1"
   },
   "files": [
-    "src"
+    "dist",
+    "components"
   ],
   "devDependencies": {
     "autoprefixer": "^7.1.2",
