@@ -1,10 +1,15 @@
 <template>
-  <div class="btn-container">Button</div>
+  <div class="btn-container">
+    <slot>{{text}}</slot>
+  </div>
 </template>
 
 <script>
 export default {
   name: 'XButton',
+  props: {
+    text: String,
+  },
 };
 </script>
 

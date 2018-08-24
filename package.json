@@ -2,7 +2,6 @@
   "name": "vui",
   "version": "1.0.0",
   "description": "A Vue Libary project",
-  "main": "lib/vui.js",
   "author": "xuyadong <xuyadong@qiyi.com>",
   "private": false,
   "scripts": {
@@ -12,12 +11,13 @@
     "test": "npm run unit",
     "lint": "eslint --ext .js,.vue src test/unit",
     "build": "node build/build.js",
-    "dist": "webpack --progress --hide-modules --config build/webpack.lib.conf.js"
+    "dist": "webpack --progress --config build/webpack.lib.conf.js"
   },
   "dependencies": {
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },
+  "main": "lib/vui.js",
   "files": [
     "lib",
     "src",
