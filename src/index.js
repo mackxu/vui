@@ -1,5 +1,5 @@
-import Button from '../components/button';
-import Header from '../components/header';
+import Button from './components/button';
+import Header from './components/header';
 
 const components = {
   Button,

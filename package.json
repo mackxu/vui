@@ -20,8 +20,7 @@
   "main": "lib/vui.js",
   "files": [
     "lib",
-    "src",
-    "components"
+    "src"
   ],
   "devDependencies": {
     "autoprefixer": "^7.1.2",
