@@ -2,26 +2,55 @@
 
 > A Vue Libary project
 
-## Build Setup
+## examples
 
+[http://localhost:8081](http://localhost:8081)
+
+## 在项目中指定tag install
+npm install git+ssh://git@gitlab.qiyi.domain:10022/ott-fe/vui.git#v1.0.1
+
+## 在项目中使用组件库
+``` javascript
+# 全局引用
+import 'vui/lib/style/vui.css'
+import vui from 'vui/lib/vui.js'
+
+Vue.use(vui)
+
+# 一般引用
+import { Button, Header } from 'vui/src/index'
+
+# 按需引用（借助 babel-plugin-import）
+import { Button, Header } from 'vui'
+
+# mixins
+import mixinsA from 'vui/src/mixins/A'
+
+# utils
+import utilsB from 'vui/src/utils/B'
+```
+**注意:** 全局引用和按需引用不能同时使用
+
+## 开发新组件
 ``` bash
-# install dependencies
-npm install
+# add files
+src/components/componentA/index.vue  
+examples/views/componentA.vue
 
-# serve with hot reload at localhost:8080
-npm run dev
+# register component
+src/components/index.js  
 
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run all tests
-npm test
+# add routes for example
+examples/router.config.js
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## 发布组件库
+``` bash
+# dist lib
+npm run dist
+git push
+
+# add version tag
+npm version major | minor | patch
+git push —-tags origin master
+```
