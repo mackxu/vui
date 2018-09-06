@@ -1,0 +1,85 @@
+// css function
+@import './variables';
+
+.clearfix() {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+.ellipsis() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.line-clamp(@val) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: @val;
+  /* autoprefixer: off */
+  -webkit-box-orient: vertical;
+  /* autoprefixer: on */
+}
+
+.size(@v) {
+  width: @v;
+  height: @v;
+}
+
+.size(@w, @h) {
+  width: @w;
+  height: @h;
+}
+
+.palt(@left, @top) {
+  position: absolute;
+  left: @left;
+  top: @top;
+}
+
+// 上下左右垂直居中
+.center-pa-size(@w, @h) {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: @w;
+  height: @h;
+}
+
+// 图片的宽度自适应父容器
+.img-responsive() {
+  vertical-align: top;
+  width: 100%;
+  height: auto;
+}
+// 可访问性隐藏
+// 一般用于图标的解释文字
+.clip() {
+  position: absolute;
+  clip: rect(0 0 0 0);
+}
+
+.radial-gradient(@shape, @from, @to) {
+  background: radial-gradient(@shape, @from, @to);
+  // 适配低配盒子
+  // https://github.com/postcss/autoprefixer/issues/854
+  background: -webkit-radial-gradient(@shape, @from, @to);
+}
+
+.gradient(@deg, @from, @to) {
+  background: linear-gradient(@deg, @from, @to);
+  background: -webkit-linear-gradient(unit(90 - unit(@deg), deg), @from, @to);
+}
+
+.text-linear-gradient(@point, @from, @to) {
+  background-image: -webkit-linear-gradient(@point, @from, @to);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
