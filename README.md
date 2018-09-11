@@ -46,11 +46,12 @@ examples/router.config.js
 
 ## 发布组件库
 ``` bash
-# dist lib
-npm run dist
-git push
+# output vui bundle
+npm run lib
 
 # add version tag
 npm version major | minor | patch
-git push —-tags origin master
+
+# push
+git push && git push origin --tags
 ```

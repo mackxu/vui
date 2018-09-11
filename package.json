@@ -11,7 +11,7 @@
     "test": "npm run unit",
     "lint": "eslint --ext .js,.vue src test/unit",
     "build": "node build/build.js",
-    "dist": "webpack --progress --config build/webpack.lib.conf.js"
+    "lib": "webpack --progress --config build/webpack.lib.conf.js"
   },
   "dependencies": {
     "vue": "^2.5.2",
@@ -89,12 +89,7 @@
     "npm": ">= 3.0.0"
   },
   "browserslist": [
-    "last 3 Chrome versions",
-    "last 3 Firefox versions",
-    "Safari >= 10",
-    "Explorer >= 11",
-    "Edge >= 12",
-    "iOS >= 10",
+    "iOS >= 7",
     "Android >= 4"
   ]
 }
