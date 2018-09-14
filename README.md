@@ -6,8 +6,10 @@
 
 [http://localhost:8081](http://localhost:8081)
 
-## 在项目中指定tag install
+## 组件库安装、升级 / 按Tag版本安装组件库
 npm install git+ssh://git@gitlab.qiyi.domain:10022/ott-fe/vui.git#v1.0.1
+
+yarn add git+ssh://git@gitlab.qiyi.domain:10022/ott-fe/vui.git#v1.0.1
 
 ## 在项目中使用组件库
 ``` javascript
