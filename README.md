@@ -2,36 +2,8 @@
 
 > A Vue Libary project
 
-## examples
-
-[http://localhost:8081](http://localhost:8081)
-
-## 组件库安装、升级 / 按Tag版本安装组件库
-npm install git+ssh://git@gitlab.qiyi.domain:10022/ott-fe/vui.git#v1.0.1
-
-yarn add git+ssh://git@gitlab.qiyi.domain:10022/ott-fe/vui.git#v1.0.1
-
-## 在项目中使用组件库
-``` javascript
-# 全局引用
-import 'vui/lib/style/vui.css'
-import vui from 'vui/lib/vui.js'
-
-Vue.use(vui)
-
-# 一般引用
-import { Button, Header } from 'vui/src/index'
-
-# 按需引用（借助 babel-plugin-import）
-import { Button, Header } from 'vui'
-
-# mixins
-import mixinsA from 'vui/src/mixins/A'
-
-# utils
-import utilsB from 'vui/src/utils/B'
-```
-**注意:** 全局引用和按需引用不能同时使用
+gitLab: [http://gitlab.qiyi.domain/ott-fe/vui](http://gitlab.qiyi.domain/ott-fe/vui)    
+docs：[http://ott-fe.gitlab.qiyi.domain/vui/#/](http://ott-fe.gitlab.qiyi.domain/vui/#/) 
 
 ## 开发新组件
 ``` bash
@@ -45,12 +17,15 @@ src/components/index.js
 # add routes for example
 examples/router.config.js
 ```
+### examples
+[http://localhost:8081](http://localhost:8081)
 
 ## 编写组件文档
-[vui在线文档](http://ott-fe.gitlab.qiyi.domain/vui/#/)    
-本地预览命令`npm run docs`、预览地址：[http://localhost:3001](http://localhost:3001)
+   
+本地预览命令`npm run docs`      
+预览地址：[http://localhost:3001](http://localhost:3001)
 
-### 组件分类有（更新于2018.9.19）
+### 组件文档分类有（更新于2018.9.19）
   * 基础组件(base/)
   * 视图组件(view/)
   * 布局组件(layout/)
