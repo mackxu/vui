@@ -50,11 +50,15 @@ examples/router.config.js
 [vui在线文档](http://ott-fe.gitlab.qiyi.domain/vui/#/)    
 本地预览命令`npm run docs`、预览地址：[http://localhost:3001](http://localhost:3001)
 
-帮助文档：
-  * 使用markdown编写文档，语法参考[markdown语法](http://xianbai.me/learn-md/article/syntax/readme.html)。
-  * 文档预览工具[docsify](https://docsify.js.org/#/)
+### 组件分类有（更新于2018.9.19）
+  * 基础组件(base/)
+  * 视图组件(view/)
+  * 布局组件(layout/)
+  * 导航组件(navigation/)
+  * 表单组件(form/)
+  * 其他(other/)
 
-文档结构应包含但不限于：
+### 文档结构应包含但不限于：
 
 \# 标题
 
@@ -85,6 +89,10 @@ slot
 |:-----|:---|
 |无|主体内容|
 |title|提示框标题，定义此 slot 时，会覆盖 props `title`|
+
+### 帮助文档：
+  * 使用markdown编写文档，语法参考[markdown语法](http://xianbai.me/learn-md/article/syntax/readme.html)。
+  * 文档预览工具[docsify](https://docsify.js.org/#/)
 
 ## 发布组件库
 ``` bash
