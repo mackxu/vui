@@ -1,5 +1,6 @@
-* [安装](install.md)
-* [快速上手](start.md)
+* 
+	* [安装](install.md)
+	* [快速上手](start.md)
 * 基础组件
 	* [Color 颜色](base/color.md)
 	* [Font 字体](base/font.md)
