@@ -1,19 +1,4 @@
-# 开始
-我是Vue组件库
+# 安装
+npm install git+ssh://git@gitlab.qiyi.domain:10022/ott-fe/vui.git#v1.0.1
 
-## Vuep
-<vuep template="#example"></vuep>
-
-<script v-pre type="text/x-template" id="example">
-  <template>
-    <div>Hello, {{ name }}!</div>
-  </template>
-
-  <script>
-    module.exports = {
-      data: function () {
-        return { name: 'Vue' }
-      }
-    }
-  </script>
-</script>
+yarn add git+ssh://git@gitlab.qiyi.domain:10022/ott-fe/vui.git#v1.0.1

@@ -47,7 +47,14 @@ examples/router.config.js
 ```
 
 ## 编写组件文档
-使用markdown编写文档，语法参考[markdown语法](http://xianbai.me/learn-md/article/syntax/readme.html)。文档结构应包含但不限于：
+[vui在线文档](http://ott-fe.gitlab.qiyi.domain/vui/#/)    
+本地预览命令`npm run docs`、预览地址：[http://localhost:3001](http://localhost:3001)
+
+帮助文档：
+  * 使用markdown编写文档，语法参考[markdown语法](http://xianbai.me/learn-md/article/syntax/readme.html)。
+  * 文档预览工具[docsify](https://docsify.js.org/#/)
+
+文档结构应包含但不限于：
 
 \# 标题
 
