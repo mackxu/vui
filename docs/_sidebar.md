@@ -9,7 +9,6 @@
 	* [Alert 提示](view/alert.md)
 	* [Modal 对话框](view/modal.md)
 	* [Toast 文字提醒](view/toast.md)
-	* [Image 图片懒加载](view/image.md)
 	* [Qrcode 二维码](view/qrcode.md)
 * 布局组件
 	* [Cell 单元格](layout/cell.md)
@@ -21,5 +20,6 @@
 	* [Cascader 三级联动](form/cascader.md)
 * 其他
 	* [Loading 加载中](other/tab.md)
+	* [Image 图片懒加载](other/image.md)
 	* [Scroll 滚动](other/scroll.md)
-	* [slide 滑动](other/slide.md)
+	* [Slide 滑动](other/slide.md)
