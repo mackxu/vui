@@ -11,7 +11,8 @@
     "test": "npm run unit",
     "lint": "eslint --ext .js,.vue src test/unit",
     "build": "node build/build.js",
-    "lib": "webpack --progress --config build/webpack.lib.conf.js"
+    "lib": "webpack --progress --config build/webpack.lib.conf.js",
+    "docs": "docsify serve docs --port 3001 --open true"
   },
   "dependencies": {
     "vue": "^2.5.2",
