@@ -17,7 +17,7 @@
 	* [Tab 标签页](navigation/tab.md)
 * 表单组件
 	* [Input 标签页](form/input.md)
-	* [Smscode 手机验证码](form/Smscode.md)
+	* [Smscode 手机验证码](form/smscode.md)
 	* [Cascader 三级联动](form/cascader.md)
 * 其他
 	* [Loading 加载中](other/loading.md)
