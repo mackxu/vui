@@ -1,7 +1,7 @@
 
 <template>
   <div>
-    <section class="shade" @click="onClose" v-if="isShowToast"></section>
+    <section class="shade" @click="onShadeClose" v-if="isShowToast"></section>
     <section class="toast" :style="{ bottom: bottomPosition + 'px' }">
       <div class="close-btn" @click="onClose"></div>
       <slot name="content"></slot>
@@ -13,9 +13,18 @@
 <script>
 export default{
   props: {
+    /*
+     * isShowToast: 是否展示当前隐藏在底部的toast浮层, 默认不展示
+     * isClickShadeCloseToast: 点击遮罩是否可以关闭浮层，默认开启
+     * contentId:slot内容的父容器id，必填参数，依据该id容器设置toast高度
+     * */
     isShowToast: {
       type: Boolean,
       default: false,
+    },
+    isClickShadeCloseToast: {
+      type: Boolean,
+      default: true,
     },
     contentId: {
       type: String,
@@ -34,6 +43,11 @@ export default{
     onClose() {
       this.$emit('on-hideToast');
     },
+    onShadeClose() {
+      if (this.isClickShadeCloseToast) {
+        this.$emit('on-hideToast');
+      }
+    },
   },
 };
 </script>
@@ -41,7 +55,7 @@ export default{
 <style lang="less" rel="stylesheet/less" scoped>
   .toast {
     position: absolute; bottom: 0; left: 0; z-index: 11;
-    height: 2.8rem; width: 100%;
+    width: 100%;
     background-color: #f1f1f1;
     transition: bottom 300ms;
   }
