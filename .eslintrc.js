@@ -45,6 +45,20 @@ module.exports = {
       optionalDependencies: ['test/unit/index.js']
     }],
     // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
-  }
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-console': 0,
+    // enforce a maximum line length
+    'max-len': 0,
+    // 禁止 ++ 和 --
+    // @off 很常用
+    'no-plusplus': 0,
+    // 禁止使用 process.env.NODE_ENV
+    // @off 使用很常见
+    'no-process-env': 0,
+    // 禁止在 return 中使用 await
+    'no-return-await': 2,
+    // 禁止使用保留字作为变量名
+    'no-shadow-restricted-names': 2,
+    'no-multi-spaces': ['error', { ignoreEOLComments: true }]
+  },
 }
