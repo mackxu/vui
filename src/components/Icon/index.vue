@@ -86,7 +86,7 @@ export default {
         const presetSetting = GradientClassSetting.get(this.type);
         backStyle = {
           background: 'none',
-          color: this.backupColor || (presetSetting && presetSetting.backupColor) || '#fff',
+          color: this.backupColor || (presetSetting && presetSetting.backupColor) || '#000',
         };
       }
       return {
