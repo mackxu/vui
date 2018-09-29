@@ -48,8 +48,8 @@ examples/router.config.js
 
 props
 
-| 属性 | 说明 | 类型 | 默认值 |
-|:-----|:---|:--:|:----|
+|属性|说明|类型|默认值|
+|:----|:---|:---:|:----|
 |content|显示的正文内容，只在非 confirm 模式下有效|String|空|
 
 events

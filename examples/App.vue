@@ -21,6 +21,10 @@ export default {
 </script>
 
 <style>
+  html{
+    font-size: 100px;
+  }
+
   body {
     font-size: 14px;
   }
