@@ -81,17 +81,17 @@ export default {
       return `icon-${this.type}`;
     },
     iconStyle() {
-      let backStyle = {};
+      let backupStyle = {};
       if (this.isGradientIcon && !this.isSupportIconGradient) {
         const presetSetting = GradientClassSetting.get(this.type);
-        backStyle = {
+        backupStyle = {
           background: 'none',
-          color: this.backupColor || (presetSetting && presetSetting.backupColor) || '#fff',
+          color: this.backupColor || (presetSetting && presetSetting.backupColor) || '#000',
         };
       }
       return {
         fontSize: this.size,
-        ...backStyle,
+        ...backupStyle,
       };
     },
     isSupportIconGradient() {
