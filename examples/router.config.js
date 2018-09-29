@@ -13,6 +13,10 @@ export default new Router({
       name: 'Header',
       path: '/header',
       component: () => import('./views/header'),
+    }, {
+      name: 'Icon',
+      path: '/icon',
+      component: () => import('./views/icon'),
     },
   ],
 });

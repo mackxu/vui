@@ -9,11 +9,12 @@
 ## 代码演示
 #### usage:
 
-    <icon type='gitv'></icon>
+    <icon type='gitv' size="100px"></icon>
     
 ## 示意
 
 以下均为基本类型，example里还有更详细的带颜色的细分类型
+
 <ul class="icon_lists clear">
     
 <li>
@@ -71,9 +72,9 @@
 </li>
 
 <li>
-<i class="icon iconfont icon-cross"></i>
+<i class="icon iconfont icon-close-solid"></i>
     <div class="name">失败</div>
-    <div class="fontclass">.icon-cross</div>
+    <div class="fontclass">.icon-close-solid</div>
 </li>
 
 <li>
@@ -93,19 +94,24 @@
     <div class="name">优惠</div>
     <div class="fontclass">.icon-cash-tag</div>
 </li>
-    
+
 </ul>
+
 
 ## API
 ### props
 |属性|说明|类型|默认值|
 |:----:|:----|:----:|:----:|
 |type|icon的类型|String|必传|
-|backupColor|用于在使用渐变色icon时对于不兼容设备进行降级的纯色方案 | String | #000 |
+|size|icon的高度，icon的宽度会自动调整|String|14px|
+|hwver|非必传，用于识别当前硬件是否支持字体渐变，不传时认为支持，使用渐变色icon的时候必传。 大批量使用时可以将hwver存入window.hwver, icon组件会自己获取|String|空串|
+|backupColor|用于在使用渐变色icon时对于不兼容设备进行降级的纯色方案, 部分自带颜色的细分类型会自带此值，优先级低于props | String | #000 |
 
 ### tips
 - 如果需要修改样式，请直接像修改原生标签一样修改即可
-- 如果出现反复打包样式文件的问题，请升级你的项目的cssnano，并且指给你的OptimizeCSSPlugin
+- icon默认为`block`形式，也建议以block形式使用
+- 不推荐`inline-block` 由于line-height受影响，可能会出现`图片显示不全`等情况，使用者需自己适配
+- 如果出现反复打包样式文件的问题，请升级你的项目的`cssnano`，并且指给你的`OptimizeCSSPlugin`
 - 由于background-clip：text语句的特殊性，目前的兼容纯色处理是以黑名单形式处理的。
 如果发现了黑名单之外的设备或者有更好的兼容判断方法，请通知我
 
