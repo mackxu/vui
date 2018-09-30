@@ -10,8 +10,8 @@ Modal对话框组件，手机端使用，TV端暂缺。
     <Button type="primary" @click="showModal1 = true">Display dialog box</Button>
     <Modal
         v-if="showModal1"
-        @on-ok="ok"
-        @on-cancel="cancel">
+        :btnTexts="['确定'， '取消']"
+        @on-click="click">
         <p>Content of dialog</p>
         <p>Content of dialog</p>
         <p>Content of dialog</p>
@@ -25,10 +25,7 @@ Modal对话框组件，手机端使用，TV端暂缺。
             }
         },
         methods: {
-            ok () {
-                // Logic
-            },
-            cancel () {
+            click (idx) {
                 // Logic
             }
         }
@@ -43,13 +40,18 @@ Modal对话框组件，手机端使用，TV端暂缺。
             fn () {
                 // Logic
                 this.$Modal.open({
-                  text: '您/确定/要取消吗',
-                  onOk() {
-                    // Logic
-                  },
-                  onCancel() {
-                    // Logic
-                  }
+                  text: '您确定要取消吗',
+                  btnTexts: [{
+                      text: '确定'
+                      onClick() {
+                          // Logic
+                      },
+                  },{
+                      text: '取消'
+                      onClick() {
+                          // Logic
+                      },
+                  }],
                 });
             },
         }
@@ -61,18 +63,16 @@ Modal对话框组件，手机端使用，TV端暂缺。
 ### props
 |属性|说明|类型|默认值|是否必填|
 |:--|:--|:--|:--|:--|:--|
-|text|提示文字，支持强调(使用‘//’包住)|String|-|是|
-|textColor|文本颜色|String|待定|否|
-|boldTextColor|需强调文本颜色|String|待定|否|
-|ok-text|提示文字，支持强调(使用‘//’包住)|String|确定|否|
-|cancel-text|提示文字，支持强调(使用‘//’包住)|String|取消|否|
-|width|宽度|String|待定|否|
+|text|提示文字|string|-|否，不填时必须通过slot来填|
+|btnTexts|底部按钮文字|array[object]，object定义{text: '例子', onClick: () => null}|[]|是|
+|width|宽度|string|待定|否|
+|showMask|是否展示遮罩|boolean|true|否|
+|quickClose|点击空白处是否自动关闭弹框|boolean|false|否|
 
 ### events
 |属性|说明|返回值|
 |:--|:--|:--|:--|
-|on-ok|提示文字|无|
-|on-cancel|提示文字|无|
+|on-click|底部按钮点击事件，参数idx表示按钮下标|无|
 
 ### slot
 |名称|说明|
@@ -92,12 +92,9 @@ Modal对话框组件，手机端使用，TV端暂缺。
 
 |属性|说明|类型|默认值|是否必填|
 |:--|:--|:--|:--|:--|:--|
-|text|提示文字，支持强调(使用‘//’包住)|String|-|是|
-|textColor|文本颜色|String|-|否|
-|boldTextColor|需强调文本颜色|String|-|否|
-|ok-text|提示文字，支持强调(使用‘//’包住)|String|确定|否|
-|cancel-text|提示文字，支持强调(使用‘//’包住)|String|取消|否|
-|width|宽度|String|待定|否|
-|on-ok|点击确定回调|Function|-|否|
-|on-cancel|点击取消回调|Function|-|否|
+|text|提示文字|string|-|是|
+|btnTexts|底部按钮文字|array[object]，object定义{text: '例子', onClick: () => null}|[]|是|
+|width|宽度|string|待定|否|
+|showMask|是否展示遮罩|boolean|true|否|
+|onClick|底部按钮点击事件，参数idx表示按钮下标|function(idx)|-|无|
 

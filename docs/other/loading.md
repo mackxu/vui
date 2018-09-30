@@ -13,7 +13,6 @@ Loading加载器组件，手机端使用，TV端暂缺。上面是旋转的icon�
                 // 1. 自动关闭
                 this.$Loading.open({
                   text: '请稍候',
-                  time: 3000,
                   onClose() {
                     console.log('我关闭了');
                   }
@@ -29,6 +28,7 @@ Loading加载器组件，手机端使用，TV端暂缺。上面是旋转的icon�
 ```
 
 ## API
+### instance
 通过全局注册Loading对象的方式使用，形如：
 - this.$Loading.open(config)
 - this.$Loading.close()
@@ -39,7 +39,6 @@ Loading加载器组件，手机端使用，TV端暂缺。上面是旋转的icon�
 
 |属性|说明|类型|默认值|是否必填|
 |:--|:--|:--|:--|:--|:--|
-|text|提示文字|String|加载中...|否|
-|time|自动关闭的延时，单位毫秒，若不填需用户手动调用close方法|Number|3000|否| // ???
-|onClose|关闭时的回调|Function|-|否|
+|text|提示文字,不填时只有图标没有文字|string|-|否|
+|onClose|关闭时的回调|function()|-|否|
 

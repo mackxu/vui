@@ -41,13 +41,13 @@
 ### props
 |属性|说明|类型|默认值|是否必填|
 |:--|:--|:--|:--|:--|:--|
-|type|滚动类型|String|- vertical(垂直滚动)或horizontal(水平滚动)|是|
-|width|滚动区域宽度|Number|-|是|
-|height|滚动区域高度|Number|-|是|
-|posArr|滚动停止位置数组，单位rem，若不填，则认为组件内部无需focus|Array[Number]|[]|否|
-|shortScrollSpeed|短滚速度，单位rem|Number|20|否|
-|longScrollSpeed|长滚速度，单位rem|Number|30|否|
-|contentLength|滚动内容总长度，一般不用填，如果无法准确计算内容总长度时才需要填|String|auto|否|
+|type|滚动类型|string|- vertical(垂直滚动)或horizontal(水平滚动)|是|
+|width|滚动区域宽度|number|-|是|
+|height|滚动区域高度|number|-|是|
+|posArr|滚动停止位置数组，单位rem，若不填，则认为组件内部无需focus|array[number]|[]|否|
+|shortScrollSpeed|短滚速度，单位rem|number|20|否|
+|longScrollSpeed|长滚速度，单位rem|number|30|否|
+|contentLength|滚动内容总长度，一般不用填，如果无法准确计算内容总长度时才需要填|string|auto|否|
 
 ### events
 |属性|说明|返回值|
