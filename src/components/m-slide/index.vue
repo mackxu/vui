@@ -16,7 +16,8 @@ export default{
     /*
      * isShowToast: 是否展示当前隐藏在底部的toast浮层, 默认不展示
      * isClickShadeCloseToast: 点击遮罩是否可以关闭浮层，默认开启
-     * contentId:slot内容的父容器id，必填参数，依据该id容器设置toast高度
+     * contentId:slot内容的父容器id，可以依据该id容器设置toast高度
+     * toastHegiht: slot内容的父容器高度, 可以设定toast高度
      * */
     isShowToast: {
       type: Boolean,
@@ -28,15 +29,22 @@ export default{
     },
     contentId: {
       type: String,
-      require: true,
+      default: '',
+    },
+    toastHegiht: {
+      type: Number,
+      default: 0,
     },
   },
   computed: {
     bottomPosition() {
-      if (this.isShow) {
+      if (this.isShowToast) {
         return 0;
       }
-      return -document.querySelector(this.contentId).clientHeight;
+      if (this.contentId) {
+        return -document.querySelector(this.contentId).clientHeight;
+      }
+      return -this.toastHegiht || -400;
     },
   },
   methods: {
