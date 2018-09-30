@@ -68,7 +68,7 @@ slot
 ### 帮助文档：
   * 使用markdown编写文档，语法参考[markdown语法](http://xianbai.me/learn-md/article/syntax/readme.html)。
   * 文档预览工具[docsify](https://docsify.js.org/#/)
-  * 设计资源https://lanhuapp.com/web/#/item/board?type=share_mark&pid=1408a997-5475-4c6a-b125-da7b1cfc2cb0&param=b7d3aab0-943e-4f3b-a740-453750d74955
+  * 设计资源 https://lanhuapp.com/web/#/item/board?type=share_mark&pid=1408a997-5475-4c6a-b125-da7b1cfc2cb0&param=b7d3aab0-943e-4f3b-a740-453750d74955
 
 ## 发布组件库
 ``` bash
