@@ -1,0 +1,46 @@
+/**
+  * className 命名: 组件名-属性
+ */
+.color-box {
+  padding: 10px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.color-c1 {
+  background-image: linear-gradient(to right, #db9b57, #fdcb96);
+}
+.color-c2 {
+  background-color: #f4c288;
+}
+.color-c3 {
+  background-color: #582c00;
+}
+.color-c4 {
+  background-color: #b2b2b2;
+}
+.color-c5 {
+  background-image: linear-gradient(to right, #bd8952, #e4c4a1);
+}
+.color-c6 {
+  background-color: #f37b2b;
+}
+
+.color-mc1 {
+  background-image: linear-gradient(to right, #d3a25f, #e1c08c);
+}
+.color-mc2 {
+  background-color: #c89f6e;
+}
+.color-mc3 {
+  background-color: #999;
+}
+.color-mc4 {
+  background-color: #000;
+  color: #fff;
+}
+.color-mc5 {
+  background-image: linear-gradient(to right, #f9534b, #ff8a42);
+}
+.color-mc6 {
+  background-color: #ff4e00;
+}

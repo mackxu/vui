@@ -1,0 +1,194 @@
+@import '../../../assets/style/tool';
+@import '../../../assets/style/variables';
+
+/**
+ * iconfont项目地址
+ * http://www.iconfont.cn/manage/index?manage_type=myprojects&projectId=530769
+ *
+ */
+@font-face {
+  font-family: "iconfont";
+  src: url('../../../assets/fonts/iconfont.eot');
+  src: url('../../../assets/fonts/iconfont.ttf') format('truetype'),
+  url('../../../assets/fonts/iconfont.svg#iconfont') format('svg');
+}
+
+.icon-gradient(@deg, @from, @to) {
+  .ps-gradient(@deg, @from, @to);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0;
+  display: block;
+}
+
+/**
+ * 推荐使用block形式
+ * 不推荐inline-block 由于line-height受影响，可能会出现图片显示不全等情况，使用者需自己适配
+ */
+
+// 叹号标
+.icon-warning {
+  .iconfont;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  color: #ffb400;
+  &:before {
+    content: "\e601";
+  }
+}
+
+// 银河奇异果icon
+.icon-gitv {
+  .iconfont;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  &:before {
+    content: "\e603";
+  }
+}
+
+// vip身份常用 - v标
+.icon-v {
+  .iconfont;
+  width: 1.11em;
+  height: 1em;
+  line-height: 1;
+  &:before {
+    content: "\e608";
+  }
+}
+
+// v标 非vip
+.icon-v-novip {
+  .icon-v;
+  color: #b2b2b2;
+}
+
+// v标 vip
+.icon-v-vip {
+  .icon-v;
+  .icon-gradient(130deg, #8c612b, #fceacc);
+  line-height: 1;
+}
+
+// vip皇冠图（tv用）
+.icon-crown-common{
+  .iconfont;
+  width: 1.25em;
+  height: 1em;
+  line-height: normal;
+  &:before {
+    content: "\e605";
+  }
+}
+
+.icon-crown-tennis {
+  width: 0.95em;
+  height: 1em;
+  line-height: 1;
+  .iconfont;
+  &:before {
+    content: "\e607";
+  }
+}
+
+// 皇冠（手机用）
+.icon-m-crown {
+  .iconfont;
+  width: 1.25em;
+  height: 1em;
+  line-height: 1;
+  &:before {
+    content: "\e60a";
+  }
+}
+
+// 金色vip皇冠（手机用）
+.icon-m-crown-vip {
+  .icon-m-crown;
+  .icon-gradient(85deg, @gold-light-m, @gold-dark-m);
+}
+
+.icon-arrow-right {
+  .iconfont;
+  width: 0.571em;
+  height: 1em;
+  line-height: 1;
+  &:before {
+    content: "\e60c";
+  }
+}
+
+.icon-gold-bag {
+  .iconfont;
+  width: 1em;
+  //height: unit(1.5 * @width, rem);
+  line-height: 1;
+  &:before {
+    content: "\e60f";
+  }
+}
+
+// 对勾
+.icon-success {
+  .iconfont;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  &:before {
+    content: "\e604";
+  }
+}
+
+// 实心X
+.icon-close-solid{
+  .iconfont;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  &:before {
+    content: '\e616';
+  }
+}
+
+// 空心X
+.icon-close-hollow {
+  .iconfont;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  &:before {
+    content: '\e625';
+  }
+}
+
+.icon-m-warning {
+  .iconfont;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  color: #FAA100;
+  &:before {
+    content: "\e61a";
+  }
+}
+
+// 折扣标牌
+.icon-cash-tag{
+  .iconfont;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  &:before {
+    content: '\e623';
+  }
+}
