@@ -7,7 +7,7 @@
         id="smscode-form"
         maxlength="6"
         autocomplete="off"
-        class="code-hidden" />
+        class="code-hidden"/>
     </form>
     <label for="smscode-form">
       <ul class="code-list">
@@ -36,7 +36,7 @@ export default {
   watch: {
     smscode(val) {
       if (val.length === SMSCODE_LEN) {
-        this.$emit('on-six-code', val);
+        this.$emit('on-code-end', val);
       }
       const newSixCode = [...val];
       newSixCode.length = SMSCODE_LEN;    // 保持固定长度
@@ -54,6 +54,7 @@ export default {
     display: flex;
     justify-content: center;
   }
+
   .code-list {
     display: inline-flex;
     border: @borderStyle;
@@ -71,9 +72,10 @@ export default {
       }
     }
   }
+
   .code-hidden {
     position: absolute;
     clip: rect(0 0 0 0);
-    transform: scale(0);    // 用于隐藏手机端上的input光标
+    transform: scale(0); // 用于隐藏手机端上的input光标
   }
 </style>
