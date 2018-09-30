@@ -16,9 +16,11 @@
 ### 组件对外属性和方法：
 ##### 组件props:
 | 属性        | 类型   |  必填  | 说明|  默认值  |
-| :----:    | :----:  :----:  |
+| :----   | :----:  :----:  |
 | isShowToast      |  Boolean  |   no     |   是否展示该组件  |   false  |
-| contentId      |  String  |   yes     |   slot父容器id，通过这个值，可以获取当前slot内容高度，隐藏时向下滑动距离  |   ''  |
+| contentId      |  String  |   yes     |   slot父容器id，通过这个值，可以获取当前slot内容高度，隐藏时向下滑动距离  |  /  |
+| isClickShadeCloseToast      |  Boolean  |   no     |   点击遮罩区域是否隐藏浮层  |  false|
+| toastHegiht      |  String  |   no     |  slot内容的父容器高度, 可以设定toast高度  |  /  |
 ##### 组件对外事件:
 | 事件名        | 参数   |  说明|  备注  |
 | :----:    | :----:  | :----:  |
