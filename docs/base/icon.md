@@ -100,12 +100,12 @@
 
 ## API
 ### props
-|属性|说明|类型|默认值|
-|:----:|:----|:----:|:----:|
-|type|icon的类型|String|必传|
-|size|icon的高度，icon的宽度会自动调整|String|14px|
-|hwver|非必传，用于识别当前硬件是否支持字体渐变，不传时认为支持，使用渐变色icon的时候必传。 大批量使用时可以将hwver存入window.hwver, icon组件会自己获取|String|空串|
-|backupColor|用于在使用渐变色icon时对于不兼容设备进行降级的纯色方案, 部分自带颜色的细分类型会自带此值，优先级低于props | String | #000 |
+|属性|说明|类型|默认值|必传|
+|:----:|:----|:----:|:----:|:----:|
+|type|icon的类型|String|必传|是|
+|size|icon的高度，icon的宽度会自动调整|String|14px|否|
+|hwver|非必传，用于识别当前硬件是否支持字体渐变，不传时认为支持，使用渐变色icon的时候必传。 大批量使用时可以将hwver存入window.hwver, icon组件会自己获取|String|空串|否|
+|downgradeColor|用于在使用渐变色icon时对于不兼容设备进行降级的纯色方案, 部分自带颜色的细分类型会自带此值，优先级低于props | String | inherit |否|
 
 ### tips
 - 如果需要修改样式，请直接像修改原生标签一样修改即可
