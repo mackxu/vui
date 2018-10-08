@@ -27,10 +27,10 @@ const PresetClassList = [
 
 const GradientClassSetting = new Map([
   ['v-vip', {
-    backupColor: '#f4c288',
+    downgradeColor: '#f4c288',
   }],
   ['m-crown-vip', {
-    backupColor: '#f4c288',
+    downgradeColor: '#f4c288',
   }],
 ]);
 
@@ -46,7 +46,7 @@ export default {
   components: {},
   data() {
     return {
-      backupStyle: null,
+      downgradeStyle: null,
       isGradientIcon: false,
     };
   },
@@ -63,7 +63,7 @@ export default {
       type: String,
       default: '',
     },
-    backupColor: {
+    downgradeColor: {
       type: String,
       default: '',
     },
@@ -81,17 +81,17 @@ export default {
       return `icon-${this.type}`;
     },
     iconStyle() {
-      let backupStyle = {};
+      let downgradeStyle = {};
       if (this.isGradientIcon && !this.isSupportIconGradient) {
         const presetSetting = GradientClassSetting.get(this.type);
-        backupStyle = {
+        downgradeStyle = {
           background: 'none',
-          color: this.backupColor || (presetSetting && presetSetting.backupColor) || '#000',
+          color: this.downgradeColor || (presetSetting && presetSetting.downgradeColor) || 'inherit',
         };
       }
       return {
         fontSize: this.size,
-        ...backupStyle,
+        ...downgradeStyle,
       };
     },
     isSupportIconGradient() {
