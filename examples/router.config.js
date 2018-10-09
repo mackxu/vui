@@ -17,6 +17,10 @@ export default new Router({
       name: 'Icon',
       path: '/icon',
       component: () => import('./views/icon'),
+    }, {
+      name: 'Drawer',
+      path: '/drawer',
+      component: () => import('./views/drawer'),
     },
   ],
 });

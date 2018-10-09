@@ -1,11 +1,13 @@
 import Button from './components/button';
 import Header from './components/header';
 import Icon from './components/Icon';
+import Drawer from './components/drawer';
 
 const components = {
   Button,
   Header,
   Icon,
+  Drawer,
 };
 
 const install = (Vue) => {
