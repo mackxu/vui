@@ -9,7 +9,6 @@
       <slot name="content"></slot>
     </section>
   </div>
-
 </template>
 
 <script>
@@ -24,7 +23,7 @@ export default{
   props: {
     /*
      * isShow: 是否展示当前隐藏在底部的toast浮层, 默认不展示
-     * quickCloseable: 点击遮罩是否可以关闭浮层，默认开启
+     * quickCloseable: 点击遮罩是否可以关闭浮层，默认关闭
      * */
     isShow: {
       type: Boolean,
@@ -32,7 +31,7 @@ export default{
     },
     quickCloseable: {
       type: Boolean,
-      default: true,
+      default: false,
     },
   },
   methods: {

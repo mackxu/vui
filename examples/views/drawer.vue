@@ -10,7 +10,9 @@
     <br>
     <br>
     <div class="container">
-      <Drawer :isShow="isShow" :quickCloseable="quickCloseable" @on-hideToast="onHideToast">
+      <Drawer :isShow="isShow"
+              :quickCloseable="quickCloseable"
+              @on-hideToast="onHideToast">
         <div slot="content">
           <p>这里是slot插槽</p>
           <p>高度会随着内容撑高</p>
@@ -20,26 +22,6 @@
           <p>高度会随着内容撑高</p>
           <p>这里是slot插槽</p>
           <p>高度会随着内容撑高</p>
-          <p>这里是slot插槽</p>
-          <p>高度会随着内容撑高</p>
-          <p>这里是slot插槽</p>
-          <p>高度会随着内容撑高</p>
-          <p>这里是slot插槽</p>
-          <p>高度会随着内容撑高</p>
-          <p>这里是slot插槽</p>
-          <p>高度会随着内容撑高</p>
-          <p>这里是slot插槽</p>
-          <p>高度会随着内容撑高</p>
-          <p>这里是slot插槽</p>
-          <p>高度会随着内容撑高</p>
-          <p>这里是slot插槽</p>
-          <p>高度会随着内容撑高</p>
-          <p>这里是slot插槽</p>
-          <p>高度会随着内容撑高</p>
-          <p>这里是slot插槽</p>
-          <p>高度会随着内容撑高</p><p>这里是slot插槽</p>
-          <p>高度会随着内容撑高</p>
-
         </div>
       </Drawer>
     </div>

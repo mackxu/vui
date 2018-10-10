@@ -21,6 +21,10 @@ export default new Router({
       name: 'Drawer',
       path: '/drawer',
       component: () => import('./views/drawer'),
+    }, {
+      name: 'Cascader',
+      path: '/cascader',
+      component: () => import('./views/cascader'),
     },
   ],
 });
