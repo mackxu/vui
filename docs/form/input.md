@@ -9,7 +9,9 @@
     <div>
       count: {{ count }}
       <Header></Header>
-      <header></header>
+      <Her></Her>
+      <x-button>haah</x-button>
+      <icon type='gitv' size="100px"></icon>
     </div>
   </template>
   <script>
