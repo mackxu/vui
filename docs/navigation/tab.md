@@ -6,18 +6,16 @@
 ### Tabs 
 #### props
 |属性|说明|类型|默认值|
-|:--|:--|:---:|:---:|
-|line-width|线条宽度|number|1|
-|active-color|选中时文字颜色|||
-|default-color|默认文字颜色|||
-|bar-active-color|设置底部bar颜色|||
-|custom-bar-width|设置底部bar宽度，默认宽度是整体tab宽度平分|string、function|||
+|:--|:--|:--|:--|
+|type|标签的基本样式`vip`、`account`|string|vip|
+|activeKey|当前激活tab面板的 key|string|第一个tab|
 
 ### tab item
 #### props
 |属性|说明|类型|默认值|
 |:---|:---|:---:|:----:|
-|active-class|当前项选中时的class|string|||
+|key|对应的`activeKey`|string|||
+|tab|tab头显示的文字|string|||
 #### events
 |事件名|说明|返回值|
 |:--|:--|:---:|
