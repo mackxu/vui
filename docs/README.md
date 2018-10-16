@@ -29,7 +29,7 @@ docs：[http://ott-fe.gitlab.qiyi.domain/vui/#/](http://ott-fe.gitlab.qiyi.domai
 
 \## 效果图
 
-组件尚未完成的，效果图可以写待完善，统一放到docs/assets/img/组件名.jpg，有多个图的，名称用组件名-xxx.jpg（png也可）
+组件尚未完成的，这部分可以写待完善，效果图统一放到docs/assets/img/组件名.jpg里，有多个图的，名称用组件名-xxx.jpg（png也可），写法：`![loading](../assets/img/loading.png)`
 
 \## API
 
