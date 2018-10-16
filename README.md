@@ -34,40 +34,12 @@ examples/router.config.js
   * 其他(other/)
 
 ### 文档结构应包含但不限于：
-
-\# 标题
-
-\## 概述
-
-\## 代码演示
-
-\## API   
-\### props    
-\### events   
-\### slot   
-
-props
-
-|属性|说明|类型|默认值|
-|:----|:---|:---:|:----|
-|content|显示的正文内容，只在非 confirm 模式下有效|String|空|
-
-events
-
-|事件名|说明|
-|:-----|:---|
-|on-ok|点击确定的回调，只在 confirm 模式下有效|
-
-slot
-
-|名称|说明|
-|:-----|:---|
-|无|主体内容|
-|title|提示框标题，定义此 slot 时，会覆盖 props `title`|
+见docs/README.md
 
 ### 帮助文档：
   * 使用markdown编写文档，语法参考[markdown语法](http://xianbai.me/learn-md/article/syntax/readme.html)。
   * 文档预览工具[docsify](https://docsify.js.org/#/)
+  * 设计资源https://lanhuapp.com/web/#/item/board?type=share_mark&pid=1408a997-5475-4c6a-b125-da7b1cfc2cb0&param=b7d3aab0-943e-4f3b-a740-453750d74955
 
 ## 发布组件库
 ``` bash
