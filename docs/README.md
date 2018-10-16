@@ -58,3 +58,5 @@ docs：[http://ott-fe.gitlab.qiyi.domain/vui/#/](http://ott-fe.gitlab.qiyi.domai
 \|content|主体内容|
 
 \|title|这是title|
+
+> 注意：表格字段统一左对齐，后面的横杠用两个就行，不用为了对齐时而多时而少，也就是表头统一使用':--'的形式
