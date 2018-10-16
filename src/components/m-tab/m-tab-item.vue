@@ -8,7 +8,7 @@
 <script>
 
 export default {
-  name: 'x-tab-item',
+  name: 'x-tabitem',
   computed: {
     itemSelectedClass() {
       const selected = this.$parent.currentIndex === this.index;

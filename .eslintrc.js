@@ -59,6 +59,7 @@ module.exports = {
     'no-return-await': 2,
     // 禁止使用保留字作为变量名
     'no-shadow-restricted-names': 2,
-    'no-multi-spaces': ['error', { ignoreEOLComments: true }]
+    'no-multi-spaces': ['error', { ignoreEOLComments: true }],
+    'linebreak-style': 0
   }
 }

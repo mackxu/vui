@@ -1,6 +1,11 @@
 <template>
   <div class="smscode-wrapper">
     <form>
+      <label for="smscode-form">
+        <ul class="code-list">
+          <li v-for="(number, index) in sixCode" :key="index">{{ number }}</li>
+        </ul>
+      </label>
       <input
         type="tel"
         v-model="smscode"
@@ -9,11 +14,6 @@
         autocomplete="off"
         class="code-hidden"/>
     </form>
-    <label for="smscode-form">
-      <ul class="code-list">
-        <li v-for="(number, index) in sixCode" :key="index">{{ number }}</li>
-      </ul>
-    </label>
   </div>
 </template>
 
@@ -21,7 +21,7 @@
 const SMSCODE_LEN = 6;
 
 export default {
-  name: 'smscodeInput',
+  name: 'x-smscode',
   data() {
     return {
       sixCode: new Array(SMSCODE_LEN),
@@ -47,6 +47,7 @@ export default {
 </script>
 
 <style lang="less" rel="stylesheet/less">
+  @import "../../styles/common";
   @borderStyle: 1px solid #c4c2cf;
   @inputHeight: .4rem;
 
