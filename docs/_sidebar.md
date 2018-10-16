@@ -21,4 +21,4 @@
 * 其他
 	* [Loading 加载提示](other/loading.md)
 	* [Scroll 滚动](other/scroll.md)
-	* [Slide 滑动](other/slide.md)
+	* [Drawer 滑动](other/drawer.md)
