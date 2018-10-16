@@ -23,4 +23,4 @@
 	* [Loading 加载中](other/loading.md)
 	* [Image 图片懒加载](other/img.md)
 	* [Scroll 滚动](other/scroll.md)
-	* [Slide 滑动](other/slide.md)
+	* [Drawer 滑动](other/drawer.md)
