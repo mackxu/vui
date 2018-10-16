@@ -5,7 +5,8 @@
 3. 支持传递默认省市区地名对组件进行初始化，若传递进来地名没有在当前数据源中找到，则忽略当前默认值进行初始化；
 
 ### 代码示例：
-```html
+```vue
+<template>
 	<div class="container">
 	  <cascader :isShow="isShow"
 				:defaultValue="defaultValue"
@@ -15,36 +16,38 @@
 				@on-confirm="onConfirm">
 	  </cascader>
 	</div>
-```
-```javascript
-export default {
-	name: 'eCascader',
-	data() {
-		return {
-			isShow: false,
-			quickCloseable: true,
-			isSupportDefaultValue: true,
-			defaultValue: {
-				province: '内蒙古自治区',
-				city: '呼和浩特市',
-				town: '新城区',
+</template>
+
+<script>
+	export default {
+		name: 'eCascader',
+		data() {
+			return {
+				isShow: false,
+				quickCloseable: true,
+				isSupportDefaultValue: true,
+				defaultValue: {
+					province: '内蒙古自治区',
+					city: '呼和浩特市',
+					town: '新城区',
+				},
+			};
+		},
+		methods: {
+			onHideToast() {
+				this.isShow = false;
 			},
-		};
-	},
-	methods: {
-		onHideToast() {
-			this.isShow = false;
+			onConfirm(data) {
+				this.selectedData = JSON.stringify(data);
+				this.selectedStr = data.province + data.city + data.town;
+			},
 		},
-		onConfirm(data) {
-			this.selectedData = JSON.stringify(data);
-			this.selectedStr = data.province + data.city + data.town;
-		},
-	},
-};
+	};
+</script>
 ```
 
-### 效果图：
--见当前组件项目目录的preview文件夹
+### 效果图
+![cascader](../assets/img/cascader.png)
 
 ### API：
 ##### props:

@@ -8,7 +8,8 @@
 
 ### 代码示例：
 
-```html
+```vue
+<template>
 	<div class="container">
 		<Drawer :isShow="isShow"
 						:quickCloseable="quickCloseable"
@@ -25,29 +26,31 @@
 			</div>
 		</Drawer>
 	</div>
-```
-```javascript
-export default {
-	name: 'eDrawer',
-	data() {
-		return {
-			isShow: true,
-			quickCloseable: true,
-		};
-	},
-	methods: {
-		onHideToast() {
-			this.isShow = false;
+</template>
+
+<script>
+	export default {
+		name: 'eDrawer',
+		data() {
+			return {
+				isShow: true,
+				quickCloseable: true,
+			};
 		},
-		showDrawer() {
-			this.isShow = true;
+		methods: {
+			onHideToast() {
+				this.isShow = false;
+			},
+			showDrawer() {
+				this.isShow = true;
+			},
 		},
-	},
-};
+	};
+</script>
 ```
 
-### 示意图：
--见当前组件项目目录的preview文件夹
+### 效果图
+![loading](../assets/img/drawer.png)
 
 ### API：
 ##### props:
