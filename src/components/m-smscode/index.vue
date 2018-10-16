@@ -21,7 +21,7 @@
 const SMSCODE_LEN = 6;
 
 export default {
-  name: 'smscodeInput',
+  name: 'smscode',
   data() {
     return {
       sixCode: new Array(SMSCODE_LEN),

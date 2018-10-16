@@ -1,11 +1,15 @@
 import Button from './components/button';
 import Header from './components/header';
 import Icon from './components/Icon';
+import smscode from './components/m-smscode';
+import input from './components/m-input';
 
 const components = {
   Button,
   Header,
   Icon,
+  smscode,
+  input,
 };
 
 const install = (Vue) => {
