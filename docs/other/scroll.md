@@ -36,6 +36,8 @@
     }
 </script>
 ```
+## 效果图
+待完善
 
 ## API
 ### props
@@ -45,6 +47,8 @@
 |width|滚动区域宽度|number|-|是|
 |height|滚动区域高度|number|-|是|
 |posArr|滚动停止位置数组，单位rem，若不填，则认为组件内部无需focus|array[number]|[]|否|
+|showBar|是否展示滚动条，为true时如果内容没有铺满也不会出现滚动条|boolean|false|否|
+|fade|滚动条是否渐隐消失|boolean|false|否|
 |shortScrollSpeed|短滚速度，单位rem|number|20|否|
 |longScrollSpeed|长滚速度，单位rem|number|30|否|
 |contentLength|滚动内容总长度，一般不用填，如果无法准确计算内容总长度时才需要填|string|auto|否|
@@ -70,5 +74,5 @@
 ### tips
 1. 动画原理，基于web animation api,使用polyfill实现的长短滚，都是使用animate函数实现的，因为animate与css动画有冲突。
 2. 长短滚切换原理，所有滚动以短滚开始，如果短滚尚未结束用户按键的次数过多，使得按键次数与实际滚动次数差值过大(目前是5)，则下一次滚动换成长滚，用户停止按键超过一定时间（目前是200ms），则滚动停止，按键次数与实际滚动次数清0。
-3. 关于按键截获，暂没有使用vue mixin的方式，使用的是工具函数添加事件监听的方式，用户按键时会计数但不一定会真正出发滚动。
+3. 关于按键截获，暂没有使用vue mixin的方式，使用的是工具函数添加事件监听的方式，用户按键时会计数但不一定触发真正出发滚动。
 4. 当滚动停止时，不论长短滚，滚动自动停止在posArr中规定的下一个位置处。

@@ -58,6 +58,8 @@ Modal对话框组件，手机端使用，TV端暂缺。
     }
 </script>
 ```
+## 效果图
+![Modal](../assets/img/modal.png)
 
 ## API
 ### props
