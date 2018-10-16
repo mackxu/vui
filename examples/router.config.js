@@ -13,6 +13,18 @@ export default new Router({
       name: 'Header',
       path: '/header',
       component: () => import('./views/header'),
+    }, {
+      name: 'Icon',
+      path: '/icon',
+      component: () => import('./views/icon'),
+    }, {
+      name: 'Drawer',
+      path: '/drawer',
+      component: () => import('./views/drawer'),
+    }, {
+      name: 'Cascader',
+      path: '/cascader',
+      component: () => import('./views/cascader'),
     },
   ],
 });

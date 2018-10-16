@@ -1,0 +1,140 @@
+@import './variables';
+
+.clear() {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+.gradient(@deg, @from, @to) {
+  background: linear-gradient(@deg, @from, @to);
+  background: -webkit-linear-gradient(unit(90 - unit(@deg), deg), @from, @to);
+}
+
+.text-linear-gradient(@point, @from, @to) {
+  background-image: -webkit-linear-gradient(@point, @from, @to);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.radial-gradient(@shape, @from, @to) {
+  background: radial-gradient(@shape, @from, @to);
+  background: -webkit-radial-gradient(@shape, @from, @to);
+}
+
+.background-normal() {
+  .radial-gradient(circle, #174346, #071419);
+}
+
+.ps-gradient(@deg, @from, @to) {
+  .gradient(unit(90 - unit(@deg), deg), @from, @to);
+}
+
+.bg-vip-gold(@deg: 80deg) { // 统一Focus金色背景
+  .ps-gradient(@deg, @focus-gold-from, @focus-gold-to);
+}
+
+.bg-cashier-vip-gold(@deg: 80deg) { // 收银台Focus金色背景
+  .ps-gradient(@deg, @focus-cashier-gold-from, @focus-cashier-gold-to);
+}
+
+.focus-item-color(@deg: 80deg) { // 统一Focus金色背景与文字
+  .ps-gradient(@deg, @focus-gold-from, @focus-gold-to);
+  color: @focus-text-color;
+}
+
+.focus-cashier-item-color(@deg: 80deg) { // 收银台Focus金色背景与文字
+  .ps-gradient(@deg, @focus-cashier-gold-from, @focus-cashier-gold-to);
+  color: @focus-text-color;
+}
+
+.bg-normal() {
+  .radial-gradient(circle, @bg-normal-from, @bg-normal-to);
+}
+
+.scale(@radix) {
+  transform: scale(@radix);
+}
+
+.ellipsis() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.line-clamp(@val) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: @val;
+  /*! autoprefixer: off */
+  -webkit-box-orient: vertical;
+  /* autoprefixer: on */
+}
+
+.size(@v) {
+  width: @v;
+  height: @v;
+}
+
+.size(@w, @h) {
+  width: @w;
+  height: @h;
+}
+
+.palt(@left, @top) {
+  position: absolute;
+  left: @left;
+  top: @top;
+}
+
+.cutout-circle(@height, @color) {
+  width: unit(@height / 2, rem);
+  height: unit(@height, rem);
+  position: relative;
+  overflow: hidden;
+  &:before {
+    content: '';
+    width: unit(@height, rem);
+    height: unit(@height, rem);
+    border-radius: unit(@height, rem);
+    border: unit(@height / 2, rem) solid @color;
+    position: absolute;
+    top: unit(-(@height / 2), rem);
+    left: unit(-@height, rem);
+  }
+}
+
+.show {
+  opacity: 1;
+}
+
+.hide {
+  opacity: 0;
+}
+// 上下左右垂直居中
+.center-pa-size(@w, @h) {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: @w;
+  height: @h;
+}
+
+// 图片的宽度自适应父容器
+.img-responsive() {
+  vertical-align: top;
+  width: 100%;
+  height: auto;
+}
+// 可访问性隐藏
+// 一般用于图标的解释文字
+.clip() {
+  position: absolute;
+  clip: rect(0 0 0 0);
+}
