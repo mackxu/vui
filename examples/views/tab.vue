@@ -3,6 +3,8 @@
       <x-tab :selectedIndex.sync="tabIndex">
         <x-tabitem>短信登录/注册</x-tabitem>
         <x-tabitem>账号登录</x-tabitem>
+        <x-tabitem>短信登录/注册</x-tabitem>
+        <x-tabitem>账号登录</x-tabitem>
       </x-tab>
     </div>
 </template>

@@ -13,14 +13,6 @@ export default {
       type: Number,
       default: 0,
     },
-    // textLine: {
-    //   type: Boolean,
-    //   default: false,
-    // },
-    // vipColor: {
-    //   type: Boolean,
-    //   default: false,
-    // },
     vip: {
       type: Boolean,
       default: false,
@@ -82,12 +74,9 @@ export default {
       left: 0;
       right: 0;
       bottom: 0;
-      width: 100%;
+      width: .35rem;
+      margin: auto;
       height: 3px;
-      &.tab-item-textLine {
-        width: .35rem;
-        margin: auto;
-      }
     }
   }
 
