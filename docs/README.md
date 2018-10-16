@@ -44,12 +44,17 @@ docs：[http://ott-fe.gitlab.qiyi.domain/vui/#/](http://ott-fe.gitlab.qiyi.domai
 \### events
 
 \|事件名|说明|
+
 \|:---|:--|
+
 \|on-ok|点击确定的回调，只在 confirm 模式下有效|
 
 \### slot
 
 \|名称|说明|
+
 \|:--|:--|
-\|无|主体内容|
-\|title|提示框标题，定义此 slot 时，会覆盖 props `title`|
+
+\|content|主体内容|
+
+\|title|这是title|
