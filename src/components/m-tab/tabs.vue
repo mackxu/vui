@@ -1,5 +1,5 @@
 <template>
-  <div class="vui-tabs">
+  <div class="vui-tabs" :class="{ 'vui-tabs-no-animation': !animated }">
     <div class="vui-tabs-nav">
       <div
         :key="index"
@@ -11,7 +11,7 @@
         <i class="vui-tabs-tab-bottomLine"></i>
       </div>
     </div>
-    <div ref="panes" class="vui-tabs-content">
+    <div ref="panes" class="vui-tabs-content" :class="{ 'vui-tabs-content-animated': animated }">
       <slot></slot>
     </div>
   </div>
@@ -21,12 +21,19 @@
 export default {
   name: 'Tabs',
   props: {
-    value: [String, Number],
+    value: {
+      type: Number,
+      default: 0,
+    },
     type: {
       validator(value) {
         return ['vip', 'account'].includes(value);
       },
       default: 'vip',
+    },
+    animated: {
+      type: Boolean,
+      default: false,
     },
   },
   data() {
@@ -53,10 +60,18 @@ export default {
             label: pane.label,
             name: index,
           });
+          pane.name = index;
         });
+      this.updateStatus();
     },
     updateVisibility(nextIndex) {
       this.$refs.panes.style = `transform: translateX(${-nextIndex * 100}%)`;
+    },
+    updateStatus() {
+      this.getTabs()
+        .forEach((tab) => {
+          tab.show = (tab.name === this.activeKey) || this.animated;
+        });
     },
     handleChange(index) {
       console.log(index);
@@ -64,6 +79,7 @@ export default {
       this.activeKey = nav.name;
       this.$emit('input', nav.name);
       this.$emit('on-click', nav.name);
+      this.updateStatus();
       this.updateVisibility(index);
     },
   },
@@ -121,12 +137,17 @@ export default {
     }
   }
 
-  .vui-tabs-content {
+  .vui-tabs-content-animated {
     display: flex;
+    will-change: transform;
+    transition: transform .3s ease-in-out;
   }
 
   .vui-tabs-pane {
     flex-shrink: 0;
     width: 100%;
+  }
+  .vui-tabs-no-animation > .vui-tabs-content {
+    transform: none!important;
   }
 </style>
