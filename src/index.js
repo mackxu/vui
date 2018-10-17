@@ -3,6 +3,7 @@ import Header from './components/header';
 import Icon from './components/Icon';
 import Drawer from './components/drawer';
 import Cascader from './components/cascader';
+import MToast from './components/m-toast/toast';
 
 const components = {
   Button,
@@ -10,6 +11,7 @@ const components = {
   Icon,
   Drawer,
   Cascader,
+  MToast,
 };
 
 const install = (Vue) => {

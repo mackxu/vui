@@ -25,6 +25,10 @@ export default new Router({
       name: 'Cascader',
       path: '/cascader',
       component: () => import('./views/cascader'),
+    }, {
+      name: 'MToast',
+      path: '/m-toast',
+      component: () => import('./views/toast'),
     },
   ],
 });
