@@ -22,25 +22,20 @@
 }
 </script>
 ```
-
-
 ## 效果图
 ##### TV端Toast样式
-<img src="../assets/img/tv-toast.png" width="50%"/>
+<img src="/vui/other/../assets/img/tv-toast.png" width="50%"/>
 ##### 手机端Toast样式
-<img src="../assets/img/m-toast.png" width="20%"/>
+<img src="/vui/other/../assets/img/m-toast.png" width="20%"/>
 ## API
-
 ### Props
-
-| 属性     | 说明                                     | 类型   | 默认值                         | 可选值 |
-| :------- | :--------------------------------------- | :----- | :----------------------------- | :----- |
-| message  | 显示的文本内容                           | String | 空                             | \      |
-| duration | 持续时间（毫秒），若为 -1 则不会自动关闭 | Number | 3000 ms（TV）、3000 ms（手机） | \      |
-
+| 属性     | 说明                                     | 类型   | 默认值                         | 可选值 | 必填 |
+| :------- | :--------------------------------------- | :----- | :----------------------------- | :----- | ---- |
+| message  | 显示的文本内容                           | String | 空                             | \      | 是   |
+| duration | 持续时间（毫秒），若为 -1 则不会自动关闭 | Number | 3000ms | \      | 否   |
 ### Events
 | 事件  | 说明      | 参数 |
 | :---- | :-------- | :------- |
-| open  | 显示toast | 对象参数 |
-| close | 关闭toast | 无       |
+| on-open  | 显示toast | 对象参数 |
+| on-close | 关闭toast | 无       |
 
