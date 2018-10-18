@@ -6,7 +6,7 @@ import Cascader from './components/cascader';
 import Input from './components/m-input';
 import Imagecode from './components/imagecode';
 import Smscode from './components/m-smscode';
-import { Tab, TabItem, Tabs, Pane } from './components/m-tab';
+import { Tabs, TabPane } from './components/m-tab';
 
 const components = {
   Button,
@@ -16,11 +16,9 @@ const components = {
   Cascader,
   Input,
   Smscode,
-  Tab,
-  TabItem,
   Imagecode,
   Tabs,
-  Pane,
+  TabPane,
 };
 
 const install = (Vue) => {
