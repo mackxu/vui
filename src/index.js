@@ -1,15 +1,22 @@
+// import vue from 'vue';
 import Button from './components/button';
 import Header from './components/header';
 import Icon from './components/Icon';
 import Drawer from './components/drawer';
 import Cascader from './components/cascader';
+import MToast from './components/m-toast/index';
+import Toast from './components/toast/index';
+import MButton from './components/m-button';
 
 const components = {
   Button,
+  MButton,
   Header,
   Icon,
   Drawer,
   Cascader,
+  MToast,
+  Toast,
 };
 
 const install = (Vue) => {
