@@ -77,10 +77,18 @@ export default {
       console.log(index);
       const nav = this.navList[index];
       this.activeKey = nav.name;
+      this.$emit('update:value', nav.name);
       this.$emit('input', nav.name);
       this.$emit('on-click', nav.name);
+    },
+  },
+  watch: {
+    value(newVal) {
+      this.activeKey = newVal;
+    },
+    activeKey(val) {
       this.updateStatus();
-      this.updateVisibility(index);
+      this.updateVisibility(val);
     },
   },
   mounted() {
