@@ -1,23 +1,48 @@
 <template>
   <div class="toast-eg-wrapper">
+    <h5>手机端Toast显示</h5>
     <div class="m-wrapper" ref="MWrapper">
-      <button @click="open"></button>
-      <!--<MToast message="请稍后" :duration="4000"></MToast>-->
+      <button class="btn-show-toast" @click="open">点击显示手机端Toast</button>
     </div>
+
+    <h5>TV端Toast显示</h5>
+    <button class="btn-show-toast" @click="openTV">点击显示TV端Toast</button>
+
   </div>
 </template>
 
 <script>
-import MToast from 'components/m-toast';
+// import Toast from 'components/toast';
 
 export default {
   name: 'MToastEg',
+  data() {
+    return {
+      visible: false,
+    };
+  },
   methods: {
     open() {
-      MToast.open({
-        message: '抱歉，请使用微信或支付宝参加该活动',
-        duration: 3000,
+      this.$mtoast.open({
+        message: '抱歉，请使用微信或支付宝参加该活动,请使用微信或支付宝参加该活动,请使用微信或支付宝参加该活动',
+        duration: 1500,
+        // 非公开属性 使用时不用传 为了在PC上显示手机Toast
         el: this.$refs.MWrapper,
+      });
+    },
+    close() {
+      this.$toast.close();
+    },
+    openTV() {
+      // Toast.open({
+      //   message: '抱歉，请使用微信或支付宝参加该活动',
+      //   duration: 3000,
+      // });
+
+      // or
+      this.$toast.open({
+        message: '请使用【微信或支付宝】请使用微信或支付宝请使用微信或支付宝',
+        duration: 5000,
       });
     },
   },
@@ -33,6 +58,9 @@ export default {
       width: 375px;
       height: 667px;
       border: 1px solid #ccc;
+      .btn-show-toast{
+        margin: 10px;
+      }
     }
   }
 </style>

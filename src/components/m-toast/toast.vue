@@ -1,6 +1,6 @@
 <template>
   <transition name="fade">
-    <div class="m-toast-wrapper" v-show="visible">
+    <div class="m-toast-wrapper" v-if="visible">
       <p class="text">{{message}}</p>
     </div>
   </transition>
@@ -8,10 +8,10 @@
 
 <script>
 export default {
-  name: 'MButton',
+  name: 'MToast',
   data() {
     return {
-      visible: true,
+      visible: false,
     };
   },
   props: {
@@ -25,16 +25,18 @@ export default {
       require: true,
     },
     el: {
-      type: Object,
+      type: HTMLBodyElement,
       require: false,
-      default: document.body,
+      // eslint-disable-next-line
+      default: function () {
+        return document.body;
+      },
     },
   },
 };
 </script>
 
 <style lang="less" rel="stylesheet/less">
-  @import '~src/styles/base';
   .m-toast-wrapper{
     position: absolute;
     top: 42%;

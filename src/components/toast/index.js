@@ -5,7 +5,7 @@ const Indicator = Vue.extend(IndicatorView);
 let instance;
 let timer = null;
 
-const MToast = {
+const Toast = {
   open(options = {}) {
     if (!instance) {
       instance = new Indicator({
@@ -17,10 +17,8 @@ const MToast = {
       this.close();
     }
     instance.message = typeof options === 'string' ? options : options.message || '';
-    instance.mountedEl = options.el ? options.el : document.body;
-
-    instance.mountedEl.appendChild(instance.$el);
-
+    document.body.appendChild(instance.$el);
+    instance.message = this.showActive(instance.message);
     Vue.nextTick(() => {
       instance.visible = true;
       if (options.duration) {
@@ -42,10 +40,16 @@ const MToast = {
       }
     }
   },
+  showActive(str) {
+    const start = str.indexOf('【');
+    const end = str.indexOf('】');
+    if (start === -1 || end === -1) return `<span class="text">${str}</span>`;
+    return `<span class="text">${str.substring(0, start)}</span><span class="text active">${str.substring(start, end + 1)}</span><span class="text">${str.substring(end + 1, str.length)}</span>`;
+  },
   install() {
     // 在Vue的原型上添加实例，以全局调用
-    Vue.prototype.$mtoast = MToast;
+    Vue.prototype.$toast = Toast;
   },
 };
 
-export default MToast;
+export default Toast;

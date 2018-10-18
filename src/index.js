@@ -1,9 +1,11 @@
+// import vue from 'vue';
 import Button from './components/button';
 import Header from './components/header';
 import Icon from './components/Icon';
 import Drawer from './components/drawer';
 import Cascader from './components/cascader';
-import MToast from './components/m-toast/toast';
+import MToast from './components/m-toast/index';
+import Toast from './components/toast/index';
 
 const components = {
   Button,
@@ -12,6 +14,7 @@ const components = {
   Drawer,
   Cascader,
   MToast,
+  Toast,
 };
 
 const install = (Vue) => {
