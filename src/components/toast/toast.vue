@@ -22,6 +22,10 @@ export default {
       type: String,
       require: true,
     },
+    fontColor: {
+      type: String,
+      require: false,
+    },
   },
 };
 </script>

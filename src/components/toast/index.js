@@ -17,8 +17,9 @@ const Toast = {
       this.close();
     }
     instance.message = typeof options === 'string' ? options : options.message || '';
+    instance.fontColor = options.fontColor || '#ffb400';
     document.body.appendChild(instance.$el);
-    instance.message = this.showActive(instance.message);
+    instance.message = this.showActive(instance.message, instance.fontColor);
     Vue.nextTick(() => {
       instance.visible = true;
       if (options.duration) {
@@ -40,11 +41,11 @@ const Toast = {
       }
     }
   },
-  showActive(str) {
+  showActive(str, fontColor) {
     const start = str.indexOf('【');
     const end = str.indexOf('】');
     if (start === -1 || end === -1) return `<span class="text">${str}</span>`;
-    return `<span class="text">${str.substring(0, start)}</span><span class="text active">${str.substring(start, end + 1)}</span><span class="text">${str.substring(end + 1, str.length)}</span>`;
+    return `<span class="text">${str.substring(0, start)}</span><span class="text" style="color: ${fontColor}">${str.substring(start, end + 1)}</span><span class="text">${str.substring(end + 1, str.length)}</span>`;
   },
   install() {
     // 在Vue的原型上添加实例，以全局调用

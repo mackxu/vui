@@ -3,7 +3,6 @@
     <h5>手机端Toast显示</h5>
     <div class="m-wrapper" ref="MWrapper">
       <MButton class="btn" type="svip" @on-click="open">点击显示手机端Toast</MButton>
-      <!--<button class="btn-show-toast" @click="open"></button>-->
     </div>
 
     <h5>TV端Toast显示</h5>
@@ -44,6 +43,7 @@ export default {
       // or
       this.$toast.open({
         message: '请使用【微信或支付宝】请使用微信或支付宝请使用微信或支付宝',
+        fontColor: 'red',
         duration: 5000,
       });
     },
