@@ -2,11 +2,13 @@
   <div class="toast-eg-wrapper">
     <h5>手机端Toast显示</h5>
     <div class="m-wrapper" ref="MWrapper">
-      <button class="btn-show-toast" @click="open">点击显示手机端Toast</button>
+      <MButton class="btn" type="svip" @on-click="open">点击显示手机端Toast</MButton>
+      <!--<button class="btn-show-toast" @click="open"></button>-->
     </div>
 
     <h5>TV端Toast显示</h5>
-    <button class="btn-show-toast" @click="openTV">点击显示TV端Toast</button>
+    <br/>
+    <Button class="btn" @on-click="openTV" size="small">点击显示TV端Toast</Button>
 
   </div>
 </template>
@@ -52,6 +54,10 @@ export default {
 <style lang="less" rel="stylesheet/less">
   .toast-eg-wrapper{
     padding: 12px;
+    button{
+      margin: 20px;
+      margin-top: 60px;
+    }
     .m-wrapper{
       position: relative;
       overflow: hidden;
