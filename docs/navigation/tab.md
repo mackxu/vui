@@ -6,19 +6,19 @@
 ### Tabs 
 #### props
 |属性|说明|类型|默认值|
-|:--|:--|:---:|:---:|
-|line-width|线条宽度|number|1|
-|active-color|选中时文字颜色|||
-|default-color|默认文字颜色|||
-|bar-active-color|设置底部bar颜色|||
-|custom-bar-width|设置底部bar宽度，默认宽度是整体tab宽度平分|string、function|||
+|:--|:--|:--|:--|
+|type|标签的基本样式`vip`、`account`|string|vip|
+|value|当前激活tab面板的 key|string|第一个tab|
+|animated|是否使用 CSS3 动画|boolean|false|
+
+#### events
+|事件名|说明|返回值|
+|:--|:--|:---:|
+|on-click|用户点击切换标签页时触发||
 
 ### tab item
 #### props
 |属性|说明|类型|默认值|
 |:---|:---|:---:|:----:|
-|active-class|当前项选中时的class|string|||
-#### events
-|事件名|说明|返回值|
-|:--|:--|:---:|
-|on-item-click|当前 tabItem 被点击时触发||
+|key|对应的`activeKey`|string|||
+|label|tab头显示的文字|string|||

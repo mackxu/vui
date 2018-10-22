@@ -1,26 +1,33 @@
 import Button from './components/button';
 import Header from './components/header';
 import Icon from './components/Icon';
-import smscode from './components/m-smscode';
-import input from './components/m-input';
+import Drawer from './components/drawer';
+import Cascader from './components/cascader';
+import Input from './components/m-input';
+import Imagecode from './components/imagecode';
+import Smscode from './components/m-smscode';
+import { Tabs, TabPane } from './components/m-tab';
 
 const components = {
   Button,
   Header,
   Icon,
-  smscode,
-  input,
+  Drawer,
+  Cascader,
+  Input,
+  Smscode,
+  Imagecode,
+  Tabs,
+  TabPane,
 };
 
 const install = (Vue) => {
-  Object.keys(components).forEach((name) => {
-    const comp = components[name];
-    console.log(comp.name || name);
-    // 优先用组件的name属性
-    Vue.component(comp.name || name, comp);
+  Object.keys(components).forEach((key) => {
+    const name = components[key].name || key;
+    Vue.component(name, components[key]);
   });
 };
-// auto install
+
 if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue);
 }

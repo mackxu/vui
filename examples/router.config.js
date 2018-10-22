@@ -17,6 +17,26 @@ export default new Router({
       name: 'Icon',
       path: '/icon',
       component: () => import('./views/icon'),
+    }, {
+      name: 'Drawer',
+      path: '/drawer',
+      component: () => import('./views/drawer'),
+    }, {
+      name: 'Cascader',
+      path: '/cascader',
+      component: () => import('./views/cascader'),
+    }, {
+      name: 'Input',
+      path: '/m-input',
+      component: () => import('./views/input'),
+    }, {
+      name: 'Smscode',
+      path: '/m-smscode',
+      component: () => import('./views/smscode'),
+    }, {
+      name: 'Tab',
+      path: '/m-tab',
+      component: () => import('./views/tab'),
     },
   ],
 });
