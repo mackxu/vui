@@ -9,9 +9,9 @@ const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const FileManagerPlugin = require('filemanager-webpack-plugin')
 
-const env = process.env.NODE_ENV === 'testing'
-  ? require('../config/test.env')
-  : require('../config/prod.env')
+const env = {
+  NODE_ENV: '"production"'
+}
 
 const webpackConfig = merge(baseWebpackConfig, {
   module: {
@@ -56,8 +56,8 @@ const webpackConfig = merge(baseWebpackConfig, {
     new webpack.optimize.ModuleConcatenationPlugin(),
     new FileManagerPlugin({
       onEnd: {
-        delete: ['docs/assets/js/lib/'],
-        copy: [{ source: 'lib/', destination: 'docs/assets/js/lib/' }],
+        delete: ['docs/assets/vui-lib/'],
+        copy: [{ source: 'lib/', destination: 'docs/assets/vui-lib/' }],
       },
     }),
   ]
