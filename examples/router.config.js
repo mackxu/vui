@@ -37,6 +37,10 @@ export default new Router({
       name: 'Tab',
       path: '/m-tab',
       component: () => import('./views/tab'),
+    }, {
+      name: 'MToast',
+      path: '/m-toast',
+      component: () => import('./views/toast'),
     },
   ],
 });
