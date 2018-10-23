@@ -94,7 +94,7 @@
 |属性|说明|类型|默认值|
 |:--|:--|:--|:--|
 |type|标签的基本样式`vip`、`account`|string|vip|
-|value|当前激活tab面板的 key|string|第一个tab|
+|value|当前激活tab面板的 key|number|第一个tab|
 |animated|是否使用 CSS3 动画|boolean|false|
 
 #### events
