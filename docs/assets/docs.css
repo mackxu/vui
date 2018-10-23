@@ -1,3 +1,22 @@
+.markdown-section iframe {
+  margin: 0;
+}
+.vuep {
+  flex-direction: column;
+  height: auto;
+}
+.vuep-editor, .vuep-preview, .vuep-error {
+  width: 100%;
+  height: auto;
+  margin-right: 0;
+}
+.vuep-editor {
+  max-height: 300px;
+}
+.vuep-preview, .vuep-error {
+  min-height: 200px;
+}
+
 /**
   * className 命名: 组件名-属性
  */

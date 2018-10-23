@@ -51,7 +51,7 @@ export default {
       ];
     },
     getTabs() {
-      return this.$children.filter(item => item.$options.name === 'TabPane');
+      return this.$children.filter(item => item.$options.name === 'tab-pane');
     },
     updateNav() {
       this.getTabs()

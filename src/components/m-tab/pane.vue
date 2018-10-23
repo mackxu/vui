@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: 'TabPane',
+  name: 'tab-pane',
   props: {
     label: String,
   },
