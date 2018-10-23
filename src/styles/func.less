@@ -78,6 +78,10 @@
   background: -webkit-linear-gradient(unit(90 - unit(@deg), deg), @from, @to);
 }
 
+.ps-gradient(@deg, @from, @to) {
+  .gradient(unit(90 - unit(@deg), deg), @from, @to);
+}
+
 .text-linear-gradient(@point, @from, @to) {
   background-image: -webkit-linear-gradient(@point, @from, @to);
   -webkit-background-clip: text;

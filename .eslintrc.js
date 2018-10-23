@@ -30,16 +30,7 @@ module.exports = {
       js: 'never',
       vue: 'never'
     }],
-    // disallow reassignment of function parameters
-    // disallow parameter object manipulation except for specific exclusions
-    'no-param-reassign': ['error', {
-      props: true,
-      ignorePropertyModificationsFor: [
-        'state', // for vuex state
-        'acc', // for reduce accumulators
-        'e' // for e.returnvalue
-      ]
-    }],
+    'no-param-reassign': 0,
     // allow optionalDependencies
     'import/no-extraneous-dependencies': ['error', {
       optionalDependencies: ['test/unit/index.js']
@@ -59,6 +50,7 @@ module.exports = {
     'no-return-await': 2,
     // 禁止使用保留字作为变量名
     'no-shadow-restricted-names': 2,
-    'no-multi-spaces': ['error', { ignoreEOLComments: true }]
+    'no-multi-spaces': ['error', { ignoreEOLComments: true }],
+    'linebreak-style': 0
   }
 }

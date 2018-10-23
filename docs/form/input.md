@@ -2,6 +2,28 @@
 ## 概述
 基本表单组件
 ## 代码示例
+
+<vuep template="#example"></vuep>
+<script v-pre type="text/x-template" id="example">
+  <template>
+    <div>
+      count: {{ count }}
+      <Header></Header>
+      <Her></Her>
+      <x-button>haah</x-button>
+      <icon type='gitv' size="100px"></icon>
+    </div>
+  </template>
+  <script>
+    export default {
+      data() {
+        return {
+          count: 0
+        }
+      }
+    }
+  </script>
+</script>
 ## API
 ### props
 |属性|说明|类型|默认值|

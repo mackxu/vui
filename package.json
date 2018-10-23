@@ -11,11 +11,12 @@
     "test": "npm run unit",
     "lint": "eslint --ext .js,.vue src test/unit",
     "build": "node build/build.js",
-    "lib": "webpack --progress --config build/webpack.lib.conf.js",
+    "lib": "node build/build-lib.js",
     "docs": "docsify serve docs --port 3001 --open true"
   },
   "dependencies": {
     "docsify-cli": "^4.2.1",
+    "filemanager-webpack-plugin": "^2.0.5",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },

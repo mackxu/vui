@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'XButton',
+  name: 'x-button',
   props: {
     // text: {
     //   type: String,
