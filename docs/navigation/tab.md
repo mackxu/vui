@@ -8,7 +8,7 @@
 
 <script v-pre type="text/x-template" id="example">
   <style>
-    @import "/assets/mquery.css"
+    html { font-size: 100px }
   </style>
   <template>
     <Tabs>
@@ -24,7 +24,7 @@
 
 <script v-pre type="text/x-template" id="example2">
   <style>
-    @import "/assets/mquery.css"
+    html { font-size: 100px }
   </style>
   <template>
     <Tabs :animated="true" @on-click="onChange">
@@ -51,7 +51,7 @@
 
 <script v-pre type="text/x-template" id="example3">
   <style>
-    @import "/assets/mquery.css"
+    html { font-size: 100px }
   </style>
   <template>
     <Tabs :value.sync="tabIndex">
@@ -78,7 +78,7 @@
 
 <script v-pre type="text/x-template" id="example4">
   <style>
-    @import "/assets/mquery.css"
+    html { font-size: 100px }
   </style>
   <template>
     <Tabs type="account">
